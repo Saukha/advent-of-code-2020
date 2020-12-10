@@ -46,7 +46,6 @@ print(df.loc[copy_ind,:])
 print('ind_flip for part 2:', ind_flip)
 print('##############################################')
 
-
 # part 2
 # reset variables
 ind_list = list(range(0, len(df)))
