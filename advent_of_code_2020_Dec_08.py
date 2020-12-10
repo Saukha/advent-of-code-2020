@@ -39,13 +39,12 @@ while ind in ind_list:
     elif  instr == 'nop':
         nop(argu)
 
-print('#######################################################################################')
 print('Part 1:')
 print('final acc_value:', acc_value)
 print('last run ind:', copy_ind)
 print(df.loc[copy_ind,:])
 print('ind_flip for part 2:', ind_flip)
-print('#######################################################################################')
+print('##############################################')
 
 
 # part 2
@@ -89,9 +88,8 @@ for i in ind_flip:
     ind = 0
     copy_ind = 0  
 
-print('#######################################################################################')
 print('Part 2:')
 print('last run ind:', copy_ind)
 print('final acc_value:', acc_value)  
 print(df.loc[copy_ind,:])
-print('#######################################################################################')
+print('##############################################')
