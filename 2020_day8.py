@@ -2,7 +2,7 @@
 # Part 1
 import pandas as pd
 
-df = pd.read_csv('12082020adventofcode.txt', sep=' ', 
+df = pd.read_csv('day8.txt', sep=' ', 
                  header=None, names=['Instruction', 'Argument'])
 
 ind_list = list(range(0, len(df)))
@@ -28,7 +28,7 @@ def nop(arg):
 while ind in ind_list:
     copy_ind = ind
     instr = df.loc[ind,'Instruction']
-    argu = df.loc[ind,'Argument']
+    argu  = df.loc[ind,'Argument']
     ind_list.remove(ind)
     global ind_flip
     ind_flip.append(ind)
@@ -43,10 +43,11 @@ print('Part 1:')
 print('final acc_value:', acc_value)
 print('last run ind:', copy_ind)
 print(df.loc[copy_ind,:])
-print('ind_flip for part 2:', ind_flip)
+# print('ind_flip for part 2:', ind_flip)
 print('##############################################')
 
 # part 2
+# ind_flip from part 1
 # reset variables
 ind_list = list(range(0, len(df)))
 acc_value = 0
@@ -88,7 +89,7 @@ for i in ind_flip:
     copy_ind = 0  
 
 print('Part 2:')
-print('last run ind:', copy_ind)
 print('final acc_value:', acc_value)  
+print('last run ind:', copy_ind)
 print(df.loc[copy_ind,:])
 print('##############################################')
