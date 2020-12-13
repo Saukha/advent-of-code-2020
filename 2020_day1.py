@@ -3,7 +3,7 @@
 
 # Dec 2020 Day 1 part two
 from numpy import genfromtxt
-arr = genfromtxt('day1.txt', delimiter='', dtype = 'int')
+arr = genfromtxt('2020_day1.txt', delimiter='', dtype = 'int')
 
 product = 0
 for i in range(len(arr)):
@@ -22,7 +22,7 @@ print('product:', product)
 
 # Dec 2020 Day 1 part two
 from numpy import genfromtxt
-arr = genfromtxt('day1.txt', delimiter='', dtype = 'int')
+arr = genfromtxt('2020_day1.txt', delimiter='', dtype = 'int')
 
 product = 0
 for i in range(len(arr)):
