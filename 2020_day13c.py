@@ -105,7 +105,7 @@ next_depts = np.zeros(len(buses), dtype = int)
 # find_t
 t, next_depts = find_t(L5_earliest-100, buses, offsets)
 
-print(buses)
-print(offsets) 
-print('part 2:  t:', t, 'next departures:', next_depts)
+# print results
+print('buses:', buses, 'offsets:', offsets)
+print('part 2: t with departures at required offsets:', next_depts)
 
