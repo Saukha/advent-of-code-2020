@@ -22,7 +22,7 @@ for bus in buses:
 # answer wait time of the next soonest bus times the bus number
 for i in range(0, len(wait)):
     if wait[i] == min(wait):
-        print('Part 1 answer:', buses[i]*wait[i])
+        print('Part 1:', buses[i]*wait[i])
 
 #################################################################
 # part 2
@@ -98,17 +98,13 @@ def offset_dept(t, buses, offsets):
 # for the actual challenge, this takes too long.  See day 13 ver e for 
 # a mathematical solution. 
 # initialize variables
-t = L3_earliest-100
-buses, offsets = buses_offsets(L3)
+t = L5_earliest-100
+buses, offsets = buses_offsets(L5)
 next_depts = np.zeros(len(buses), dtype = int)
 
 # find offset departures
 t, next_depts = offset_dept(t, buses, offsets)
 
 # print results
-print('Part 2:')
-print('Buses:', buses)
-print('Offsets:', offsets)
-print('Last bus left at:', t)
-print('Next departures at offsets:', next_depts)
+print('Part 2:', next_depts[0])
 
