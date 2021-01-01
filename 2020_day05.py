@@ -47,8 +47,8 @@ def find_seat(l):
     
     return [row[0], col[0], id]
 
-
-with open('2020_day5.txt', 'r') as f:
+# inputs
+with open('2020_day05.txt', 'r') as f:
     data = f.readlines()
 
 max_id = 0
@@ -57,7 +57,7 @@ for l in data:
     if seat[2] > max_id:
         max_id = seat[2]
     
-print('max ID:', int(max_id))
+print('part 1: max id =', int(max_id))
 
 #############
 # part 2
@@ -70,5 +70,5 @@ for l in data:
 id_list.sort()
 for i in range(0, len(id_list)-1):
     if id_list[i+1]-id_list[i]!=1:
-        print('my ticket id:', int(id_list[i]+1))
+        print('part 2: my ticket id =', int(id_list[i]+1))
 
