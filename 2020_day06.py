@@ -3,7 +3,7 @@
 
 # 2020 day 6 part 1
 
-with open('2020_day6.txt', 'r') as f:
+with open('2020_day06.txt', 'r') as f:
     data = f.readlines()
 
 q = set()
