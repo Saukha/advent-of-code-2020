@@ -5,14 +5,14 @@
 # Part 1
 import pandas as pd
 
-df = pd.read_csv('2020_day8.txt', sep=' ', 
+df = pd.read_csv('2020_day08.txt', sep=' ', 
                  header=None, names=['Instruction', 'Argument'])
 
-ind_list = list(range(0, len(df)))
-ind_flip = []
+ind_list  = list(range(0, len(df)))
+ind_flip  = []
 acc_value = 0
-ind = 0
-copy_ind = 0
+ind       = 0
+copy_ind  = 0
 
 def acc(arg):
     global acc_value
@@ -41,15 +41,7 @@ while ind in ind_list:
     elif  instr == 'nop':
         nop(argu)
 
-print('Part 1:')
-print('final acc_value:', acc_value)
-print('last run ind:', copy_ind)
-print(df.loc[copy_ind,:])
-# print('repeated ind:', ind)
-# print(df.loc[ind,:])
-# print('ind_flip for part 2:', ind_flip)
-print('#####################################')
-
+print('Part 1:', acc_value)
 
 # part 2
 # ind_flip from part 1
@@ -92,9 +84,5 @@ for i in ind_flip:
     ind = 0
     copy_ind = 0  
 
-print('Part 2:')
-print('final acc_value:', acc_value)  
-print('last run ind:', copy_ind)
-print(df.loc[copy_ind,:])
-print('#####################################')
+print('Part 2:', acc_value)  
 
